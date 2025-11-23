@@ -15,6 +15,8 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        serif: ['Playfair Display', 'serif'],
+        display: ['Playfair Display', 'serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -108,6 +110,32 @@ export default {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-10px)" },
         },
+        "slide-up": {
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        "slide-down": {
+          "0%": { opacity: "0", transform: "translateY(-20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        "zoom-in": {
+          "0%": { opacity: "0", transform: "scale(0.9)" },
+          "100%": { opacity: "1", transform: "scale(1)" },
+        },
+        pulse: {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.5" },
+        },
+        "glow-pulse": {
+          "0%": { boxShadow: "0 0 0px rgba(123, 97, 255, 0)" },
+          "50%": { boxShadow: "0 0 12px rgba(123, 97, 255, 0.5)" },
+          "100%": { boxShadow: "0 0 0px rgba(123, 97, 255, 0)" },
+        },
+        "scale-pop": {
+          "0%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.04)" },
+          "100%": { transform: "scale(1)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.3s ease-out",
@@ -118,6 +146,12 @@ export default {
         "slide-in-right": "slide-in-right 0.4s ease-out",
         "gradient-shift": "gradient-shift 8s ease infinite",
         "float": "float 3s ease-in-out infinite",
+        "slide-up": "slide-up 0.5s ease-out",
+        "slide-down": "slide-down 0.5s ease-out",
+        "zoom-in": "zoom-in 0.3s ease-out",
+        "pulse-slow": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "glow-pulse": "glow-pulse 1.4s ease-in-out infinite",
+        "scale-pop": "scale-pop 0.3s ease-out",
       },
       backgroundSize: {
         "300%": "300%",
